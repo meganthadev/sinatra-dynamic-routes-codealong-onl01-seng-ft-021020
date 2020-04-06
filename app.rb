@@ -13,10 +13,10 @@ class App < Sinatra::Base
     "Hello #{@user_name}!"
   end
 
-  get '/medicines/:id' do
-    
+  get '/goodbye/:name' do
+    @name = params[:name]
+    "Goodbye, #{name}."
     end.first
-   erb :'/medicines/show.html'
-  end
+   
   
 end
